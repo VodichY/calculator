@@ -20,12 +20,12 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
-    chooseOperation() {
+    chooseOperation(operation) {
         if (this.currentOperand === '') return
         if (this.previousOperand !=='') {
             this.compute()
         }
-        this.operation = this.operation;
+        this.operation = operation;
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
     }
